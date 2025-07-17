@@ -1,8 +1,9 @@
-/* Reset some defaults */
+/* Modern Neutral Theme - Home Page */
+
 .home-page {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #F4F6F8, #EDEFF1, #F4F6F8);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -12,9 +13,10 @@
 .home-container {
     text-align: center;
     padding: 40px;
-    background: white;
+    background: #FFFFFF;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #BDC3C7;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     max-width: 400px;
     width: 90%;
     animation: fadeIn 1s ease-in;
@@ -23,13 +25,13 @@
 .home-title {
     font-size: 28px;
     font-weight: 600;
-    color: #333;
+    color: #2C3E50;
     margin-bottom: 15px;
 }
 
 .home-subtitle {
     font-size: 16px;
-    color: #666;
+    color: #2D3436;
     margin-bottom: 30px;
 }
 
@@ -39,8 +41,8 @@
 }
 
 .home-login-btn {
-    background-color: #4A90E2;
-    color: #fff;
+    background-color: #2C3E50;
+    color: #FFFFFF;
     padding: 12px 30px;
     font-size: 16px;
     border: none;
@@ -50,7 +52,19 @@
 }
 
 .home-login-btn:hover {
-    background-color: #357ABD;
+    background-color: #3498DB;
     transform: scale(1.05);
 }
 
+/* Optional animation for smoother appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

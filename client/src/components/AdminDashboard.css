@@ -1,91 +1,149 @@
 .admin-dashboard {
     display: flex;
     height: 100vh;
-    font-family: sans-serif;
-    margin: 0px;
-    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F4F6F8;
+    color: #2D3436;
 }
 
 .sidebar {
-    width: 220px;
-    background-color: #022c43;
-    color: #fff;
+    width: 250px;
+    background-color: #2C3E50;
+    color: white;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
 }
 
-.brand {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #00bfa6;
+.sidebar .brand {
+    font-size: 1.5rem;
+    color: #BDC3C7;
+    margin-bottom: 20px;
 }
 
-.menu {
+.sidebar .menu {
     list-style: none;
     padding: 0;
 }
 
-.menu li {
-    margin: 15px 0;
+.sidebar .menu li {
+    margin-bottom: 15px;
 }
 
-.menu li a {
+.sidebar .menu li a {
     text-decoration: none;
-    color: #fff;
+    color: #BDC3C7;
+    font-weight: 500;
+}
+
+.sidebar .menu li a:hover {
+    color: #3498DB;
 }
 
 .dashboard-content {
     flex-grow: 1;
-    background-color: #f4f4f4;
-    padding: 20px;
+    padding: 30px;
+    background-color: #F4F6F8;
+    overflow-y: auto;
 }
 
 .header {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
+    font-family:'Courier New', Courier, monospace;
+    color: #2C3E50;
+}
+
+.header span {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .logout-btn {
-    background-color: #00bfa6;
-    color: #fff;
-    padding: 8px 15px;
+    background-color: #3498DB;
+    color: white;
     border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.overview {
-    margin-bottom: 30px;
+.logout-btn:hover {
+    background-color: #2C3E50;
 }
 
-.overview-cards, .leave-cards {
+.dashboard-overview {
+    margin-top: 90px;
+}
+
+.dashboard-overview h2{
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: #2C3E50;
+}
+.overview h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: #2C3E50;
+}
+
+.overview-cards {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .card {
-    background: #fff;
+    flex: 1 1 250px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     padding: 20px;
-    flex: 1;
-    min-width: 180px;
-    border-radius: 8px;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     text-align: center;
+    transition: all 0.3s ease;
+    gap: 20px;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
     margin-bottom: 10px;
+    color: #2C3E50;
 }
 
-.approved {
-    background-color: #e0f7e9;
+.card p {
+    font-size: 1.2rem;
+    color: #3498DB;
+    margin-top: 80px;
 }
 
-.pending {
-    background-color: #fff5db;
+.clickable-card {
+    text-decoration: none;
+    cursor: pointer;
+    color: #2C3E50;
+    transition: 0.3s;
 }
 
-.rejected {
-    background-color: #ffdddd;
+.clickable-card:hover {
+    color: #3498DB;
+    transform: translateY(-2px);
+}
+
+/* Responsive Charts */
+.recharts-wrapper {
+    margin: 0 auto;
+}
+
+/* Optional spacing for charts in cards */
+.card .recharts-wrapper {
+    margin-top: 10px;
 }

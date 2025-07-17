@@ -1,24 +1,158 @@
-/* DepartmentList.css */
-input {
-    margin: 5px;
-    padding: 8px;
-    width: 200px;
+/* List Page */
+.department-list-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid #BDC3C7;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-button {
-    margin: 5px;
-    padding: 8px 16px;
-    cursor: pointer;
+.department-list-container h2 {
+    text-align: center;
+    color: #2C3E50;
+    margin-bottom: 20px;
+    font-size: 28px;
 }
 
-table {
-    margin-top: 20px;
+.department-btn-primary {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.department-btn-primary:hover {
+    background-color: #3498DB;
+}
+
+.department-table {
     width: 100%;
     border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-th, td {
-    padding: 10px;
+.department-table th,
+.department-table td {
+    border: 1px solid #BDC3C7;
+    padding: 12px 16px;
     text-align: center;
-    border: 1px solid #ddd;
+    color: #2D3436;
+    font-size: 14px;
+}
+
+.department-table thead {
+    background-color: #F4F6F8;
+}
+
+.department-table th {
+    color: #2C3E50;
+    font-weight: 600;
+}
+
+.department-table tbody tr:hover {
+    background-color: #F4F6F8;
+    transition: 0.2s;
+}
+
+.department-btn-secondary {
+    padding: 6px 12px;
+    background-color: #27AE60;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.department-btn-secondary:hover {
+    background-color: #2C3E50;
+}
+
+.department-btn-delete {
+    padding: 6px 12px;
+    background-color: #E74C3C;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.department-btn-delete:hover {
+    background-color: #C0392B;
+}
+
+/* Form Page */
+.department-form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid #BDC3C7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.department-form-container h2 {
+    text-align: center;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.department-form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.department-form-group label {
+    margin-bottom: 5px;
+    color: #2D3436;
+    font-weight: 500;
+}
+
+.department-form-group input {
+    padding: 10px;
+    border: 1px solid #BDC3C7;
+    border-radius: 6px;
+    background-color: #F4F6F8;
+    font-size: 14px;
+    color: #2D3436;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.department-form-group input:focus {
+    border-color: #3498DB;
+}
+
+.department-btn-primary {
+    width: 18%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2C3E50;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.department-btn-primary:hover {
+    background-color: #3498DB;
 }

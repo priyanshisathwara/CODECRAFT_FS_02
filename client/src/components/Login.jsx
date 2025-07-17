@@ -45,12 +45,12 @@ function Login() {
     };
 
     return (
-        <div className="login-page">
-            <div className="login-container">
-                <h2>Login</h2>
+        <div className="login-page-container">
+            <div className="login-box">
+                <h2 className="login-title">Login</h2>
                 <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <label htmlFor="email"><strong>Email</strong></label>
+                    <div className="login-form-group">
+                        <label htmlFor="email" className="login-label"><strong>Email</strong></label>
                         <input
                             type="text"
                             placeholder="Enter email"
@@ -58,11 +58,12 @@ function Login() {
                             name="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            className="login-input"
                         />
                     </div>
 
-                    <div className="form-group">
-                        <label htmlFor="password"><strong>Password</strong></label>
+                    <div className="login-form-group">
+                        <label htmlFor="password" className="login-label"><strong>Password</strong></label>
                         <input
                             type="password"
                             placeholder="Enter password"
@@ -70,14 +71,16 @@ function Login() {
                             name="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            className="login-input"
                         />
                     </div>
 
-                    <button type="submit" className="login-btn">Login</button>
+                    <button type="submit" className="login-submit-btn">Login</button>
                 </form>
             </div>
             <ToastContainer />
         </div>
+
     );
 }
 

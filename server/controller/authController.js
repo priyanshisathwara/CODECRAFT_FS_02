@@ -42,3 +42,19 @@ export const loginAdmin = async (req, res) => {
   });
 };
 
+export const getDashboardData = (req, res) => {
+  const sql = `
+        SELECT 
+            (SELECT COUNT(*) FROM employee) AS totalEmployees,
+            (SELECT COUNT(*) FROM department) AS totalDepartments,
+            (SELECT IFNULL(AVG(total_salary), 0) FROM salary) AS totalSalary,
+            (SELECT COUNT(*) FROM employee WHERE gender = 'Male') AS maleCount,
+            (SELECT COUNT(*) FROM employee WHERE gender = 'Female') AS femaleCount,
+            (SELECT COUNT(*) FROM employee WHERE gender = 'Other') AS otherCount;
+          `;
+
+  db.query(sql, (err, result) => {
+    if (err) return res.status(500).json(err);
+    res.json(result[0]);
+  });
+};

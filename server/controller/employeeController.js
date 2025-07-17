@@ -18,10 +18,10 @@ export const getEmployees = (req, res) => {
 
 
 export const createEmployee = (req, res) => {
-    const { name, email, mobile, department_id, salary, joining_date } = req.body;
+    const { name, email, mobile, gender, department_id, salary, joining_date } = req.body;
     db.query(
-        "INSERT INTO employee (name, email, mobile, department_id, joining_date) VALUES (?, ?, ?, ?, ?)",
-        [name, email, mobile, department_id, salary, joining_date],
+        "INSERT INTO employee (name, email, mobile, gender, department_id, joining_date) VALUES (?, ?, ?, ?, ?, ?)",
+        [name, email, mobile, gender, department_id, joining_date],
         (err) => {
             if (err) return res.status(500).json(err);
             res.status(201).json({ message: "Employee created successfully" });
@@ -32,16 +32,18 @@ export const createEmployee = (req, res) => {
 
 export const updateEmployee = (req, res) => {
     const { id } = req.params;
-    const { name, email, mobile, department_id, salary, joining_date } = req.body;
+    const { name, email, mobile, gender, department_id, salary, joining_date } = req.body;
     db.query(
-        "UPDATE employee SET name = ?, email = ?, mobile = ?, department_id = ?,  joining_date = ? WHERE id = ?",
-        [name, email, mobile, department_id, joining_date, id],
+        "UPDATE employee SET name = ?, email = ?, mobile = ?, gender = ?, department_id = ?, joining_date = ? WHERE id = ?",
+        [name, email, mobile, gender, department_id, joining_date, id],
         (err) => {
             if (err) return res.status(500).json(err);
             res.json({ message: "Employee updated successfully" });
         }
     );
 };
+
+
 
 export const deleteEmployee = (req, res) => {
     const { id } = req.params;
